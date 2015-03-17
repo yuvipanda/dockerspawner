@@ -143,7 +143,7 @@ class DockerSpawner(Spawner):
 
     @property
     def container_name(self):
-        return "{}-{}".format(self.container_prefix, self.user.name)
+        return "{}-{}".format(self.container_prefix, self.user.id)
 
     def load_state(self, state):
         super(DockerSpawner, self).load_state(state)
